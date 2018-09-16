@@ -1,7 +1,9 @@
+require 'pry'
 class Hash
   def keys_of(something, *vals)
     rtn_keys = []
     vals.each do |v|
+      binding.pry
       if something.key(v) != nil
         rtn_keys << something.key(v)
       end
